@@ -7,7 +7,7 @@ use Illuminate\Validation\Rules\Unique;
 use Symfony\Contracts\Service\Attribute\Required;
 use App\Models\user;
 use Illuminate\Support\Facades\Hash;
-use Session;
+use Illuminate\Support\Facades\Session;
 class Auth extends Controller
 {
     public function login(){
@@ -61,6 +61,17 @@ class Auth extends Controller
 
     }
     public function dashboard(){
-        return "Welcome";
+        $data=array();
+        if(Session::has('loginId')){
+            $data=User::where('id','=',Session::get('loginId'))->first();
+        }
+        return view('welcome',compact('data'));
+    }
+    public function logout(){
+        if (Session::has('loginId'))
+        {
+            Session::pull('loginId');
+            return redirect('login');
+        }
     }
 }

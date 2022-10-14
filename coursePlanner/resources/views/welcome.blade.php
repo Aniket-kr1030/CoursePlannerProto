@@ -3,8 +3,26 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="assets/script.js"></script>
+        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="/css/offcanvas.css">
 
-        <title>VCPlanner</title>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="offcanvas.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Course Planner </title>
         <link rel="icon" type="image/png" href="https://iconarchive.com/download/i99510/webalys/kameleon.pics/Student-3.ico">
 
         <!-- Fonts -->
@@ -20,11 +38,302 @@
                 font-family: 'Nunito', sans-serif;
             }
         </style>
+        <script src="https://cdn.syncfusion.com/ej2/ej2-base/dist/global/ej2-base.min.js" type="text/javascript"></script>
+        <script src="https://cdn.syncfusion.com/ej2/ej2-inputs/dist/global/ej2-inputs.min.js" type="text/javascript"></script>
+        <script src="https://cdn.syncfusion.com/ej2/ej2-buttons/dist/global/ej2-buttons.min.js" type="text/javascript"></script>
+        <script src="https://cdn.syncfusion.com/ej2/ej2-lists/dist/global/ej2-lists.min.js" type="text/javascript"></script>
+        <script src="https://cdn.syncfusion.com/ej2/ej2-popups/dist/global/ej2-popups.min.js" type="text/javascript"></script>
+        <script src="https://cdn.syncfusion.com/ej2/ej2-calendars/dist/global/ej2-calendars.min.js" type="text/javascript"></script>
+        <script src="https://cdn.syncfusion.com/ej2/dist/ej2.min.js" type="text/javascript"></script>
+        <link href="https://cdn.syncfusion.com/ej2/ej2-base/styles/material.css" rel="stylesheet" type="text/css" />
+        <link href="https://cdn.syncfusion.com/ej2/ej2-buttons/styles/material.css" rel="stylesheet" type="text/css" />
+        <link href="https://cdn.syncfusion.com/ej2/ej2-calendars/styles/material.css" rel="stylesheet" type="text/css" />
     </head>
+    
     <body class="antialiased">
-        <h1>Vel Tech Course Planner</h1>
-        @foreach($students as $student)
-        <h2>{{$student['id']}} {{$student['name']}} {{$student['vtu']}}</h2>
-        @endforeach
+        <div class="wrapper">
+        
+            <div class="section">
+             <div class="n1">
+             
+                 <nav class="navbar navbar-expand-lg bg-light maincont fixing">
+                 <div class="container-fluid">
+                     
+                   <a class="navbar-brand logo" href="#">
+                     <img src="/images/rwamp_logo_v2.png" alt="Logo" width="100" height="50" class="d-inline-block align-text-top">  </a>
+                   <div class="collapse navbar-collapse" id="navbarScroll">
+                     <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                         <li class="nav-item dropdown">
+                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                               Courses
+                             </a>
+                             <ul class="dropdown-menu">
+                               <li><a class="dropdown-item" href="#">Action</a></li>
+                               <li><a class="dropdown-item" href="#">Another action</a></li>
+                               <li><hr class="dropdown-divider"></li>
+                               <li><a class="dropdown-item" href="#">Something else here</a></li>
+                             </ul>
+                           </li>
+                       <li class="nav-item dropdown">
+                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                           Others
+                         </a>
+                         <ul class="dropdown-menu">
+                           <li><a class="dropdown-item" href="#">Action</a></li>
+                           <li><a class="dropdown-item" href="#">Another action</a></li>
+                           <li><hr class="dropdown-divider"></li>
+                           <li><a class="dropdown-item" href="#">Something else here</a></li>
+                         </ul>
+                       </li>
+                       
+                     </ul>
+                     <form class="d-flex" role="search">
+                       <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                       <button class="btn btn-outline-success" type="submit">Search</button>
+                     </form>
+                 
+                     <div class="nav-item dropdown">
+                     <a class="nav-link dropdown-toggle" id="username" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                         <img src="/images/icons8-collaborator-male-30.png" alt="Logo" padding-left="5px" padding-right="30px" width="30" height="24" >
+                         {{$data->name}}
+                     </a>
+                         
+                         <ul class="dropdown-menu ">
+                             <li><a class="dropdown-item" href="#"> {{$data->name}} <br> VTU{{$data->vtu}}</a></li>
+                             <li><hr class="dropdown-divider"></li>
+                             <li><a class="dropdown-item" href="logout"> Log Out </a></li>
+                           </ul>
+                     </div>
+                             
+                     
+                   </div>
+                 </div>
+               </nav>
+             </div>
+         <div class="top_navbar">
+             
+             
+           <div class="hamburger">
+             <a href="#">
+               <i class="fas fa-bars"></i>
+             </a>
+           </div>
+         </div>
+         <div class="container">
+             <div class="one">
+                 <h1>Upcoming Events<a href="#"></a></h1>
+                    <p> <a href='#'>CONGRATULATIONS!!! to all students selected in "Capgemini". </a></p>
+                    <p> <a href="#">Student List Selected in Amazon.</a> </p>
+                    <p> <a href="#">Selection Criteria for Campus Drive &amp; Placement.</a> </p>
+                    <p> <a href="#">Online Aptitude Practice session for B.Tech Final Year (All Branch).</a> </p>
+                    <p> <a href="#">Blood Donation Camp on 30/09/2022.</a> </p>
+                    <p> <a href="#">VTUEEE 2022 Notice.</a></p>
+                    <br>
+                    
+         
+               </div>
+               <div class="one">
+                 <h1>Technology Spotlight<a href="#"></a></h1>
+                    <p> <a href='#'>CONGRATULATIONS!!! to all students selected in "Capgemini". </a></p>
+                    <p> <a href="#">Student List Selected in Amazon.</a> </p>
+                    <p> <a href="#">Selection Criteria for Campus Drive &amp; Placement.</a> </p>
+                    <p> <a href="#">Online Aptitude Practice session for B.Tech Final Year (All Branch).</a> </p>
+                    <p> <a href="#">Blood Donation Camp on 30/09/2022.</a> </p>
+                    <p> <a href="#">VTUEEE 2022 Notice.</a></p>
+                    <br>
+                    
+         
+               </div>
+               <div class="one">
+                 <h1>News and Blog<a href="#"></a></h1>
+                    <p> <a href='#'>CONGRATULATIONS!!! to all students selected in "Capgemini". </a></p>
+                    <p> <a href="#">Student List Selected in Amazon.</a> </p>
+                    <p> <a href="#">Selection Criteria for Campus Drive &amp; Placement.</a> </p>
+                    <p> <a href="#">Online Aptitude Practice session for B.Tech Final Year (All Branch).</a> </p>
+                    <p> <a href="#">Blood Donation Camp on 30/09/2022.</a> </p>
+                    <p> <a href="#">VTUEEE 2022 Notice.</a></p>
+                    <br>
+                    
+         
+               </div>
+     
+               <div class="rightbar one" style="transform: translateY(-1px)">
+     
+                <div id="element" >
+                </div>
+                <script>
+                    // initialize the Calendar component
+                    var calendar = new ej.calendars.Calendar();
+             
+                    // Render the initialized button.
+                    calendar.appendTo('#element')
+                </script>
+               <br>
+               
+               <div class="notif">
+                 <li>
+                 <h2>
+                     NOTIFICATIONS
+                 </h2>
+                 <ul>
+                     <p style="font-size: 12px; padding:0px; line-height:1.3;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita, ad.</p>
+                 </ul>
+                 <ul>
+                     <p style="font-size: 12px; padding:0px; line-height:1.3;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita, ad.</p>
+                 </ul>
+                 <ul>
+                     <p style="font-size: 12px; padding:0px; line-height:1.3;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita, ad.</p>
+                 </ul>
+                
+                 </li>
+               </div>
+               </div>
+     
+             
+     
+         </div>
+         
+         <div class = "headcourse">
+             <h2> COURSE ENROLLED </h2><br>
+             <div id="ifnot">
+             <div class="card text-center">
+                 <div class="card-header">
+                 </div>
+                 <div class="card-body">
+                   <h5 class="card-title"> You have not selected any course </h5>
+                 
+                   <a href="#" class="btn btn-primary"> Plan Your Course</a>
+                 </div>
+                 <div class="card-footer text-muted">
+                   2 days ago
+                 </div>
+               </div>
+             </div>
+         </div>
+         
+     
+     
+         
+         <div class="two">
+     
+             
+         
+     
+         <div class="card" style="width: 30rem;">
+             
+             <img class="card-img-top" src="https://source.unsplash.com/random/200x70?sig=1" alt="Card image cap">
+             <div class="card-body">
+               <h5 class="card-title">Card title</h5>
+               <p class="card-text">Program Core</p>
+               <a href="#" class="btn btn-primary">Go somewhere</a>
+             </div>
+           </div>
+     
+           <div class="card" style="width: 30rem;">
+             <img class="card-img-top" src="https://source.unsplash.com/random/200x70?sig=1" alt="Card image cap">
+             <div class="card-body">
+               <h5 class="card-title">Data Structure </h5>
+               <p class="card-text"> Program Core </p>
+               <a href="#" class="btn btn-primary">Go somewhere</a>
+             </div>
+           </div>
+     
+           <div class="card" style="width: 30rem;">
+             <img class="card-img-top" src="https://source.unsplash.com/random/200x70?sig=1" alt="Card image cap">
+             <div class="card-body">
+               <h5 class="card-title">Card title</h5>
+               <p class="card-text">Program Core</p>
+               <a href="#" class="btn btn-primary">Go somewhere</a>
+             </div>
+           </div>
+           <div class="card" style="width: 30rem;">
+             <img class="card-img-top" src="https://source.unsplash.com/random/200x70?sig=1"alt="Card image cap">
+             <div class="card-body">
+               <h5 class="card-title">Card title</h5>
+               <p class="card-text">Program Core</p>
+               <a href="#" class="btn btn-primary">Go somewhere</a>
+             </div>
+           </div>
+           <div class="card" style="width: 30rem;">
+             <img class="card-img-top" src="https://source.unsplash.com/random/200x70?sig=1" alt="Card image cap">
+             <div class="card-body">
+               <h5 class="card-title">Card title</h5>
+               <p class="card-text">Program Core</p>
+               <a href="#" class="btn btn-primary">Go somewhere</a>
+             </div>
+           </div>
+           <div class="card" style="width: 30rem;">
+             <img class="card-img-top" src="https://source.unsplash.com/random/200x70?sig=1" alt="Card image cap">
+             <div class="card-body">
+               <h5 class="card-title">Card title</h5>
+               <p class="card-text">Program Core</p>
+               <a href="#" class="btn btn-primary">Go somewhere</a>
+             </div>
+           </div>
+         </div>
+     
+         
+     
+       </div>
+             <div class="sidebar">
+                 <div class="profile">
+                     <h3> {{$data->name}} </h3>
+                     <p>VTU{{$data->vtu}}</p>
+                 </div>
+                 <ul>
+                     <li>
+                         <a href="#" class="active">
+                             <span class="icon"><i class="fas fa-home"></i></span>
+                             <span class="item">Home</span>
+                         </a>
+                     </li>
+                     <li>
+                         <a href="#">
+                             <span class="icon"><i class="fas fa-desktop"></i></span>
+                             <span class="item">My Dashboard</span>
+                         </a>
+                     </li>
+                     <li>
+                         <a href="#">
+                             <span class="icon"><i class="fas fa-user-friends"></i></span>
+                             <span class="item"> Course Planner</span>
+                         </a>
+                     </li>
+                     <li>
+                         <a href="#">
+                             <span class="icon"><i class="fas fa-tachometer-alt"></i></span>
+                             <span class="item"> GPA Tools</span>
+                         </a>
+                     </li>
+                     <li>
+                         <a href="#">
+                             <span class="icon"><i class="fas fa-database"></i></span>
+                             <span class="item"> Settings </span>
+                         </a>
+                     <li>
+                         <a href="#">
+                             <span class="icon"><i class="fas fa-cog"></i></span>
+                             <span class="item"> Others </span>
+                         </a>
+                     </li>
+                 </ul>
+             </div>
+             
+         </div>
+         <div class="footer">
+                 <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed, adipisci! <br> COPYRIGHT 2022 </p>
+         </div>
+     
+     
+     <!--SCRIPTS -->
+         
+         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+     
+         <script>
+               var hamburger = document.querySelector(".hamburger");
+       hamburger.addEventListener("click", function(){
+         document.querySelector("body").classList.toggle("active");
+       })
+         </script>
     </body>
 </html>

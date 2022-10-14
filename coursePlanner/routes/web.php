@@ -4,6 +4,7 @@ use App\Http\Controllers\uploadCourse;
 use App\Models\students;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth;
+use GuzzleHttp\Middleware;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,10 +28,11 @@ Route::get('/downloadPdf',
 [uploadCourse::class, 'download']
 );
 
-Route::get('/',[Auth::class,'login']);
-Route::get('/registration',[Auth::class,'registration']);
+Route::get('/login',[Auth::class,'login'])->middleware('alreadyLoggedIn');
+Route::get('/registration',[Auth::class,'registration'])->middleware('alreadyLoggedIn');
 Route::post('/registered-user',[Auth::class,'registerUser'])->name
 ('registered-user');
 Route::post('/login-user',[Auth::class,'loginUser'])->name
 ('login-user');
-Route::get('/dashboard',[Auth::class,'dashboard']);
+Route::get('/dashboard',[Auth::class,'dashboard'])->middleware('isLoggedIn');
+Route::get('/logout',[Auth::class,'logout']);
