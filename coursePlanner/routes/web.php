@@ -16,11 +16,7 @@ use App\Http\Controllers\Auth;
 |
 */
 
-Route::get('/', function () {
-    return view('upload_course',[
-        'students' => students::all()
-    ]);
-});
+
 
 Route::post('/uploadPdf',
 [uploadCourse::class, 'store']
@@ -31,7 +27,7 @@ Route::get('/downloadPdf',
 [uploadCourse::class, 'download']
 );
 
-Route::get('/login',[Auth::class,'login']);
+Route::get('/',[Auth::class,'login']);
 Route::get('/registration',[Auth::class,'registration']);
 Route::post('/registered-user',[Auth::class,'registerUser'])->name
 ('registered-user');
