@@ -13,15 +13,16 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('class_report', function (Blueprint $table) {
+        Schema::create('faculties', function (Blueprint $table) {
             $table->id();
-            $table->integer('take_id');
-            $table->integer('ut1');
-            $table->integer('ut2');
-            $table->integer('mt1');
-            $table->integer('mt2');
-            $table->integer('cur_att');
-            $table->integer('cur_class');
+            $table->string('tts')->unique();
+            $table->string('name');
+            $table->string('address', 200);
+            $table->string('phone');
+            $table->string('email')->unique();
+            $table->string('qualification');
+            $table->integer('experience');
+            $table->date('date_of_join')->nullable();
             $table->timestamps();
         });
     }
@@ -33,6 +34,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('class_report');
+        Schema::dropIfExists('faculties');
     }
 };

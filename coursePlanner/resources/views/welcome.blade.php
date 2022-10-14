@@ -23,5 +23,8 @@
     </head>
     <body class="antialiased">
         <h1>Vel Tech Course Planner</h1>
+        @foreach($students as $student)
+        <h2>{{$student['id']}} {{$student['name']}} {{$student['vtu']}}</h2>
+        @endforeach
     </body>
 </html>

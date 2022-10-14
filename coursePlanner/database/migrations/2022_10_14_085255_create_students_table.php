@@ -13,12 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('takes', function (Blueprint $table) {
-            $table->id()->unique();
-            $table->string('vtu');
-            $table->string('tts');
-            $table->integer('courseid');
-            $table->integer('sem'); 
+        Schema::create('students', function (Blueprint $table) {
+            $table->id();
+            $table->string('name');
+            $table->string('vtu')->unique();
+            $table->string('degree');
+            $table->string('specialisation');
+            $table->integer('semester');
             $table->timestamps();
         });
     }
@@ -30,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('takes');
+        Schema::dropIfExists('students');
     }
 };
