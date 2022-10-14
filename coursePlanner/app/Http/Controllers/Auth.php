@@ -14,6 +14,30 @@ class Auth extends Controller
         return view('Login');
 
     }
+    public function welcome(){
+        $data=array();
+        if(Session::has('loginId')){
+            $data=User::where('id','=',Session::get('loginId'))->first();
+        }
+        return view('welcome',compact('data'));
+
+    }
+    public function courseplanner(){
+        $data=array();
+        if(Session::has('loginId')){
+            $data=User::where('id','=',Session::get('loginId'))->first();
+        }
+        return view('courseplanner',compact('data'));
+
+    }
+    public function gpacalculator(){
+        $data=array();
+        if(Session::has('loginId')){
+            $data=User::where('id','=',Session::get('loginId'))->first();
+        }
+        return view('gpacalculator',compact('data'));
+
+    }
     public function registration(){
         return view('Registration');
 

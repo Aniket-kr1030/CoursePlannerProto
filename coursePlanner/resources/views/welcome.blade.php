@@ -68,10 +68,12 @@
                                Courses
                              </a>
                              <ul class="dropdown-menu">
-                               <li><a class="dropdown-item" href="#">Action</a></li>
-                               <li><a class="dropdown-item" href="#">Another action</a></li>
-                               <li><hr class="dropdown-divider"></li>
-                               <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                <li><a class="dropdown-item" href="#">Computer Science</a></li>
+                                <li><a class="dropdown-item" href="#">Electronic & communication</a></li>
+                                <li><a class="dropdown-item" href="#">Information Technology</a></li>
+                                <li><a class="dropdown-item" href="#">Electrical </a></li>
+                                <li><a class="dropdown-item" href="#">Mechanical</a></li>
+                                <li><a class="dropdown-item" href="#">BioMedical</a></li>
                              </ul>
                            </li>
                        <li class="nav-item dropdown">
@@ -82,7 +84,7 @@
                            <li><a class="dropdown-item" href="#">Action</a></li>
                            <li><a class="dropdown-item" href="#">Another action</a></li>
                            <li><hr class="dropdown-divider"></li>
-                           <li><a class="dropdown-item" href="#">Something else here</a></li>
+                           <li><a class="dropdown-item" href="#">Contact Us</a></li>
                          </ul>
                        </li>
                        
@@ -202,7 +204,7 @@
                  <div class="card-body">
                    <h5 class="card-title"> You have not selected any course </h5>
                  
-                   <a href="#" class="btn btn-primary"> Plan Your Course</a>
+                   <a href="courseplanner" class="btn btn-primary"> Plan Your Course</a>
                  </div>
                  <div class="card-footer text-muted">
                    2 days ago
@@ -282,25 +284,19 @@
                  </div>
                  <ul>
                      <li>
-                         <a href="#" class="active">
+                         <a href="welcome" class="active">
                              <span class="icon"><i class="fas fa-home"></i></span>
                              <span class="item">Home</span>
                          </a>
                      </li>
                      <li>
-                         <a href="#">
-                             <span class="icon"><i class="fas fa-desktop"></i></span>
-                             <span class="item">My Dashboard</span>
-                         </a>
-                     </li>
-                     <li>
-                         <a href="#">
+                         <a href="courseplanner">
                              <span class="icon"><i class="fas fa-user-friends"></i></span>
                              <span class="item"> Course Planner</span>
                          </a>
                      </li>
                      <li>
-                         <a href="#">
+                         <a href="gpacalculator">
                              <span class="icon"><i class="fas fa-tachometer-alt"></i></span>
                              <span class="item"> GPA Tools</span>
                          </a>
