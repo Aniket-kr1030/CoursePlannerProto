@@ -340,8 +340,8 @@ class ComposerStaticInit247a6e6cbad7fe45279cfe0e130dac1a
         ),
         'Psr\\Http\\Message\\' => 
         array (
-            0 => __DIR__ . '/..' . '/psr/http-message/src',
-            1 => __DIR__ . '/..' . '/psr/http-factory/src',
+            0 => __DIR__ . '/..' . '/psr/http-factory/src',
+            1 => __DIR__ . '/..' . '/psr/http-message/src',
         ),
         'Psr\\Http\\Client\\' => 
         array (
@@ -508,6 +508,7 @@ class ComposerStaticInit247a6e6cbad7fe45279cfe0e130dac1a
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
+        'App\\Http\\Controllers\\uploadCourse' => __DIR__ . '/../..' . '/app/Http/Controllers/uploadCourse.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
         'App\\Http\\Middleware\\EncryptCookies' => __DIR__ . '/../..' . '/app/Http/Middleware/EncryptCookies.php',
@@ -522,6 +523,7 @@ class ComposerStaticInit247a6e6cbad7fe45279cfe0e130dac1a
         'App\\Models\\classreport' => __DIR__ . '/../..' . '/app/Models/classreport.php',
         'App\\Models\\course' => __DIR__ . '/../..' . '/app/Models/course.php',
         'App\\Models\\faculty' => __DIR__ . '/../..' . '/app/Models/faculty.php',
+        'App\\Models\\pdfCourse' => __DIR__ . '/../..' . '/app/Models/pdfCourse.php',
         'App\\Models\\students' => __DIR__ . '/../..' . '/app/Models/students.php',
         'App\\Models\\takes' => __DIR__ . '/../..' . '/app/Models/takes.php',
         'App\\Models\\teaches' => __DIR__ . '/../..' . '/app/Models/teaches.php',
@@ -637,6 +639,7 @@ class ComposerStaticInit247a6e6cbad7fe45279cfe0e130dac1a
         'Cron\\MinutesField' => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron/MinutesField.php',
         'Cron\\MonthField' => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron/MonthField.php',
         'Database\\Factories\\UserFactory' => __DIR__ . '/../..' . '/database/factories/UserFactory.php',
+        'Database\\Factories\\studentsFactory' => __DIR__ . '/../..' . '/database/factories/studentsFactory.php',
         'Database\\Seeders\\DatabaseSeeder' => __DIR__ . '/../..' . '/database/seeders/DatabaseSeeder.php',
         'DeepCopy\\DeepCopy' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/DeepCopy.php',
         'DeepCopy\\Exception\\CloneException' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/Exception/CloneException.php',
