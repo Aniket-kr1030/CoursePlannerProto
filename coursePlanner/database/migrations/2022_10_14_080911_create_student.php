@@ -13,14 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('student', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('vtu-tts')->unique();
-            $table->string('password');
-            $table->string('email')->unique();
-            $table->string('role');
-            $table->rememberToken();
+            $table->string('vtu')->unique();
+            $table->string('degree');
+            $table->string('specialisation');
+            $table->integer('semester');
             $table->timestamps();
         });
     }
@@ -32,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('student');
     }
 };

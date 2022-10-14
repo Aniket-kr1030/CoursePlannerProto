@@ -13,14 +13,15 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('class_report', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('vtu-tts')->unique();
-            $table->string('password');
-            $table->string('email')->unique();
-            $table->string('role');
-            $table->rememberToken();
+            $table->integer('take_id');
+            $table->integer('ut1');
+            $table->integer('ut2');
+            $table->integer('mt1');
+            $table->integer('mt2');
+            $table->integer('cur_att');
+            $table->integer('cur_class');
             $table->timestamps();
         });
     }
@@ -32,6 +33,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('class_report');
     }
 };
