@@ -199,7 +199,7 @@ input[type=reset]:hover {
                       <li><a class="dropdown-item" href="#">Action</a></li>
                       <li><a class="dropdown-item" href="#">Another action</a></li>
                       <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="#">Contact Us</a></li>
+                      <li><a class="dropdown-item" href="contact">Contact Us</a></li>
                     </ul>
                   </li>
                   
@@ -216,7 +216,7 @@ input[type=reset]:hover {
                 </a>
                     
                     <ul class="dropdown-menu ">
-                        <li><a class="dropdown-item" href="#"> {{$data->name}} <br> VTU{{$data->vtu}}</a></li>
+                        <li><a class="dropdown-item" href="profile"> {{$data->name}} <br> VTU{{$data->vtu}}</a></li>
                         <li><hr class="dropdown-divider"></li>
                         <li><a class="dropdown-item" href="logout"> Log Out </a></li>
                       </ul>
