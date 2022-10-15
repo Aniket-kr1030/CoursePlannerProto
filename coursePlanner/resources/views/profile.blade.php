@@ -167,7 +167,7 @@ body{
                 <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                          Courses
+                          Syllabus
                         </a>
                         <ul class="dropdown-menu">
                           <li><a class="dropdown-item" href="#">Computer Science</a></li>
@@ -281,7 +281,7 @@ body{
         </div>
         <ul>
             <li>
-                <a href="welcome" >
+                <a href="dashboard" >
                     <span class="icon"><i class="fas fa-home"></i></span>
                     <span class="item">Home</span>
                 </a>
@@ -290,7 +290,7 @@ body{
             <li>
                 <a href="courseplanner" class="active">
                     <span class="icon"><i class="fas fa-user-friends"></i></span>
-                    <span class="item"> Course Planner</span>
+                    <span class="item"> My Planner</span>
                 </a>
             </li>
             <li>

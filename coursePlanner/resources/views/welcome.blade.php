@@ -22,7 +22,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Course Planner </title>
+    <title> Home </title>
         <link rel="icon" type="image/png" href="https://iconarchive.com/download/i99510/webalys/kameleon.pics/Student-3.ico">
 
         <!-- Fonts -->
@@ -65,7 +65,7 @@
                      <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
                          <li class="nav-item dropdown">
                              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                               Courses
+                               Syllabus
                              </a>
                              <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="#">Computer Science</a></li>
@@ -254,7 +254,7 @@
                      <li>
                          <a href="courseplanner">
                              <span class="icon"><i class="fas fa-user-friends"></i></span>
-                             <span class="item"> Course Planner</span>
+                             <span class="item"> My Planner</span>
                          </a>
                      </li>
                      <li>
