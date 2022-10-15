@@ -256,12 +256,12 @@
             </li>
             <li>
                 <a href="#">
-                    <span class="icon"><i class="fas fa-database"></i></span>
+                    <span class="icon"><i class="fas fa-cog"></i></span>
                     <span class="item"> Settings </span>
                 </a>
             <li>
                 <a href="#">
-                    <span class="icon"><i class="fas fa-cog"></i></span>
+                    <span class="icon"><i class="fas fa-database"></i></span>
                     <span class="item"> Others </span>
                 </a>
             </li>
