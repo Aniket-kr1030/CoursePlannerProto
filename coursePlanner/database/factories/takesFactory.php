@@ -3,12 +3,11 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Ramsey\Uuid\Type\Integer;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\students>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\takes>
  */
-class studentsFactory extends Factory
+class takesFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -18,7 +17,7 @@ class studentsFactory extends Factory
     public function definition()
     {
         return [
-           //
+            //
         ];
     }
 }

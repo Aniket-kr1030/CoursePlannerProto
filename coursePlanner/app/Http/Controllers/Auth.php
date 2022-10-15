@@ -8,6 +8,7 @@ use Symfony\Contracts\Service\Attribute\Required;
 use App\Models\user;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
+use App\Models\takes;
 class Auth extends Controller
 {
     public function login(){
@@ -35,7 +36,26 @@ class Auth extends Controller
         if(Session::has('loginId')){
             $data=User::where('id','=',Session::get('loginId'))->first();
         }
-        return view('gpacalculator',compact('data'));
+        $courses=array();
+        $i = 0;
+        $courses = takes::all()->where('vtu','=',$data->vtu);
+        $i = count($courses);
+        return view('gpacalculator',compact('data'),
+  
+        [
+        'count' => $i,
+        'courses' => $courses,
+        'num' => 0,
+        ]
+    );
+
+    }
+    public function profile(){
+        $data=array();
+        if(Session::has('loginId')){
+            $data=User::where('id','=',Session::get('loginId'))->first();
+        }
+        return view('profile',compact('data'));
 
     }
     public function registration(){
@@ -89,7 +109,16 @@ class Auth extends Controller
         if(Session::has('loginId')){
             $data=User::where('id','=',Session::get('loginId'))->first();
         }
-        return view('welcome',compact('data'));
+        $courses=array();
+        $i = 0;
+        $courses = takes::all()->where('vtu','=',$data->vtu);
+        $i = count($courses);
+        return view('welcome',compact('data'),[
+        'courses' => $courses,
+        'count' => $i,
+        'datavtu' => $data->vtu,
+        ]
+    );
     }
     public function logout(){
         if (Session::has('loginId'))

@@ -199,7 +199,7 @@ input[type=reset]:hover {
                       <li><a class="dropdown-item" href="#">Action</a></li>
                       <li><a class="dropdown-item" href="#">Another action</a></li>
                       <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="#">Contact Us</a></li>
+                      <li><a class="dropdown-item" href="contact">Contact Us</a></li>
                     </ul>
                   </li>
                   
@@ -216,7 +216,7 @@ input[type=reset]:hover {
                 </a>
                     
                     <ul class="dropdown-menu ">
-                        <li><a class="dropdown-item" href="#"> {{$data->name}} <br> VTU{{$data->vtu}}</a></li>
+                        <li><a class="dropdown-item" href="profile"> {{$data->name}} <br> VTU{{$data->vtu}}</a></li>
                         <li><hr class="dropdown-divider"></li>
                         <li><a class="dropdown-item" href="logout"> Log Out </a></li>
                       </ul>
@@ -294,7 +294,11 @@ input[type=reset]:hover {
 		<td>VTU Number <td><input type="text" name="id" maxlength="10" value="{{$data->vtu}}" onkeyup="onlyNum()"> 
 		</tr>
 		<tr>
-		<td>Name <td><input type="text" name="name" onkeyup="onlyNum()">
+<<<<<<< Updated upstream
+		<td>Name <td><input type="text" name="name" value="{{$data->name}}"onkeyup="onlyNum()">
+=======
+		<td>Name <td><input type="text" name="name" value="{{$data->name}}" onkeyup="onlyNum()">
+>>>>>>> Stashed changes
 		</tr>
 		<tr>
 		<td>Program <td>Diploma &nbsp;<input type="radio" name="prog" value="Diploma">
@@ -312,7 +316,7 @@ input[type=reset]:hover {
                     </select>
             </tr>
 		<tr>
-		<td>Number of subjects <td><input type="text" maxlength="2" size=1 name="subject" id="subject" onkeydown="delTable()" onkeyup="generate()">
+		<td>Number of subjects <td><input type="text" maxlength="2" value="{{$count}}" size=1 name="subject" id="subject" onkeydown="delTable()" onkeyup="generate()">
 		</tr>
 		<tr>
 		
@@ -339,17 +343,17 @@ input[type=reset]:hover {
 						"<tr align=center><td colspan=4><h1>Calculate GPA</h1></tr><tr align=center><td><b>No.<td><b>Code<td><b>Credit<td><b>Grade</tr>"
 						;
 						for(var i=0;i<x;i++){
+        
 						document.getElementById("genTable").innerHTML+=
-						"<tr><td>"+(i+1)+"<td><input type='text' name='code'><td><input type='text' maxlength=1 size=1 name='credit'><td><select name='grade'>"
+						"<tr><td>"+(i+1)+"<td><input type='text'  name='code'><td><input type='text'  maxlength=1 size=1 name='credit'><td><select name='grade'>"
 					+"<option value=''>Select Grade"
 					+"<option value='S'>S"
 					+"<option value='A'>A"
 					+"<option value='B'>B"
 					+"<option value='C'>C"
 					+"<option value='D'>D"
-					
 				+"</select></tr>";						}
-						document.getElementById("genTable").innerHTML+="<input type='hidden' name='no' value="+x+">";
+						document.getElementById("genTable").innerHTML+="<input type='hidden' name='no' value="+x+"> ";
 					}
 					}
 				}
