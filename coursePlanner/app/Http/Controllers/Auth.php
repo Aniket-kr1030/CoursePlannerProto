@@ -36,7 +36,18 @@ class Auth extends Controller
         if(Session::has('loginId')){
             $data=User::where('id','=',Session::get('loginId'))->first();
         }
-        return view('gpacalculator',compact('data'));
+        $courses=array();
+        $i = 0;
+        $courses = takes::all()->where('vtu','=',$data->vtu);
+        $i = count($courses);
+        return view('gpacalculator',compact('data'),
+  
+        [
+        'count' => $i,
+        'courses' => $courses,
+        'num' => 0,
+        ]
+    );
 
     }
     public function profile(){
