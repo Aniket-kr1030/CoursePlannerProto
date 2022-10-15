@@ -126,7 +126,7 @@
                     <ul class="dropdown-menu ">
                         <li><a class="dropdown-item" href="profile"> {{$data->name}} <br> VTU{{$data->vtu}}</a></li>
                         <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#"> Log Out </a></li>
+                        <li><a class="dropdown-item" href="logout"> Log Out </a></li>
                       </ul>
                 </div>
                         
