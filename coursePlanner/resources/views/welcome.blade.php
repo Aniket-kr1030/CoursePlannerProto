@@ -68,11 +68,11 @@
                                Syllabus
                              </a>
                              <ul class="dropdown-menu">
-                              <li><a class="dropdown-item" href="/pdf/B.Tech-CSE-R-15_Master_Copy_Updated_As%20on%2021.11.2020-website.pdf" download>Computer Science</a></li>
+                          <li><a class="dropdown-item" href="pdf/B.Tech-CSE-R-15_Master_Copy_Updated_As%20on%2021.11.2020-website.pdf" download><object data="/pdf/B.Tech-CSE-R-15_Master_Copy_Updated_As%20on%2021.11.2020-website.pdf">Computer Science</object></a></li>
                           <li><a class="dropdown-item" href="#">Electronic & communication</a></li>
                           <li><a class="dropdown-item" href="#">Information Technology</a></li>
-                          <li><a class="dropdown-item" href="/pdf/VTUR15-REGULATION.p" download>Electrical </a></li>
-                          <li><a class="dropdown-item" href="/pdf/B.Tech%20(%20Mechanical)-%20Curriculum%20&%20Syllabus.pdf" download>Mechanical</a></li>
+                          <li><a class="dropdown-item" href="pdf/VTUR15-REGULATION.p" download>Electrical </a></li>
+                          <li><a class="dropdown-item" href="pdf/B.Tech%20(%20Mechanical)-%20Curriculum%20&%20Syllabus.pdf" download>Mechanical</a></li>
                           <li><a class="dropdown-item" href="#">BioMedical</a></li>
                              </ul>
                            </li>
@@ -232,7 +232,7 @@
              <div class="card-body">
                <h5 class="card-title">Card title</h5>
                <p class="card-text">Program Core</p>
-               <a href="#" class="btn btn-primary">Go somewhere</a>
+               <a href="#" class="btn btn-primary">View</a>
              </div>
            </div>
         @endforeach
