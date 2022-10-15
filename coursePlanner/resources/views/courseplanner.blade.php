@@ -351,18 +351,18 @@
                 
                 
               </tr>
-              @foreach($fastcourse as $fastc):
-              <tr>
-                  <td><input type="checkbox"></td>
-  
-                 <td>{{$fastc->name}}</td>
-                 <td>{{$fastc->id}}</td>
-                 <td>{{$fastc->credit}} </td>
-                 <td> Mon(01:45PM)-Thurs(11:45AM)-Fri(09:45AM) </td>
-                 
-               </tr>
-               @endforeach
-            
+             
+            @foreach($slowcourse as $slowc):
+            <tr>
+                <td><input type="checkbox"></td>
+
+               <td>{{$slowc->name}}</td>
+               <td>{{$slowc->id}}</td>
+               <td>{{$slowc->credit}} </td>
+               <td> Mon(01:45PM)-Thurs(11:45AM)-Fri(09:45AM) </td>
+               
+             </tr>
+             @endforeach
              
              
       </table>
