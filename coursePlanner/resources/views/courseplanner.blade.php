@@ -21,6 +21,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Course Planner </title>
     <style>
+        .tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+
+.tab button:hover {
+  background-color: #ddd;
+}
+
+.tab button.active {
+  background-color: #ccc;
+}
+
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
         .cont_11{
     transform: translateX(10px);
    padding-top: 10px;
@@ -47,6 +77,14 @@
 
 
  }
+ .tabcontent {
+  animation: fadeEffect 1s;
+}
+
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
 
  .button5 {background-color: #555555;} /* Black */
  .button {
@@ -87,7 +125,7 @@
                 <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                          Syllabus
+                          Courses
                         </a>
                         <ul class="dropdown-menu">
                           <li><a class="dropdown-item" href="#">Computer Science</a></li>
@@ -150,25 +188,173 @@
     </div>
 
     <div class="cont_11">
-        <div class="checkbox">
-        <div class="btn-group">
-            <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked />
-            <label class="btn btn-secondary" for="option1">Slow</label>
-          
-            <input type="radio" class="btn-check " name="options" id="option2" autocomplete="off" />
-            <label class="btn btn-secondary" for="option2">Medium</label>
-          
-            <input type="radio" class="btn-check " name="options" id="option3" autocomplete="off" />
-            <label class="btn btn-secondary" for="option3">Fast</label>
+        <div class="tab">
+            <button class="tablinks" onclick="openCity(event, 'Slow')" id="defaultOpen">Slow</button>
+            <button class="tablinks" onclick="openCity(event, 'Medium')">Medium</button>
+            <button class="tablinks" onclick="openCity(event, 'Fast')">Fast</button>
             
           </div>
-    </div>
     </div>
     <div class="c2">
     <div class="three">
         
         <h2>Courses for You <a href="#"></a></h2>
         <form>
+            <div id="Slow" class="tabcontent">
+                <table  border="0" style="font-size:13px; width:100%; padding:2.5%;">
+                   <tr>
+                    <td>
+        
+                    </td>
+                   </tr>
+                   <br>
+                    <tr>
+                       <td><strong> Select </strong></td> 
+                       <td><strong> Course Name </strong></td>
+                       <td><strong> Course ID </strong></td>
+                       <td><strong> Credit </strong></td>
+                       <td style="transform: translateX(7vw);"><strong> Schedule </strong></td>
+                       
+                       
+                     </tr>
+        
+                     <tr>
+                        <td><strong> ------</strong></td> 
+                        <td><strong> --------------------</strong></td>
+                        <td><strong> -----------</strong></td>
+                        <td><strong> ----------- </strong></td>
+                        <td><strong> -------------------------------------------------- </strong></td>
+                        
+                        
+                      </tr>
+                      <tr>
+                        <td><strong> &nbsp;</strong></td> 
+                        <td><strong> &nbsp;</strong></td> 
+                        <td><strong> &nbsp;</strong></td> 
+                        <td><strong> &nbsp;</strong></td> 
+                        <td><strong> &nbsp;</strong></td> 
+                        
+                        
+                        
+                      </tr>
+                     
+                    
+                     <tr>
+                        <td><input type="checkbox"></td>
+        
+                        <td>Seminar II</td>
+                        <td>1151CS0251</td>
+                        <td> 1</td>
+                        <td style="transform: translateX(7vw);"> Tue(03:45PM) </td>
+                      </tr>
+                     <tr>
+                        <td><input type="checkbox"></td>
+        
+                        <td>Operating System</td>
+                        <td>1151CS0222</td>
+                        <td> 3 </td>
+                        <td> Mon(02:45PM)-Wed(10:45AM)-Sat(02:45PM) </td>
+                      </tr>
+                     <tr>
+                        <td><input type="checkbox"></td>
+        
+                        <td> Operating System Laboratory</td>
+                        <td>1151CS0212</td>
+                        <td> 1 </td>
+                        <td style="transform: translateX(7vw);"> Fri(10:45AM) </td>
+                      </tr>
+                     
+              </table>
+               
+              <br><br><br><br><br>
+              <button class="button button5"> REGISTER </button>
+                </div>
+            <div id="Medium" class="tabcontent">
+                <table  border="0" style="font-size:13px; width:100%; padding:2.5%;">
+                   <tr>
+                    <td>
+        
+                    </td>
+                   </tr>
+                   <br>
+                    <tr>
+                       <td><strong> Select </strong></td> 
+                       <td><strong> Course Name </strong></td>
+                       <td><strong> Course ID </strong></td>
+                       <td><strong> Credit </strong></td>
+                       <td style="transform: translateX(7vw);"><strong> Schedule </strong></td>
+                       
+                       
+                     </tr>
+        
+                     <tr>
+                        <td><strong> ------</strong></td> 
+                        <td><strong> --------------------</strong></td>
+                        <td><strong> -----------</strong></td>
+                        <td><strong> ----------- </strong></td>
+                        <td><strong> -------------------------------------------------- </strong></td>
+                        
+                        
+                      </tr>
+                      <tr>
+                        <td><strong> &nbsp;</strong></td> 
+                        <td><strong> &nbsp;</strong></td> 
+                        <td><strong> &nbsp;</strong></td> 
+                        <td><strong> &nbsp;</strong></td> 
+                        <td><strong> &nbsp;</strong></td> 
+                        
+                        
+                        
+                      </tr>
+                     
+                    <tr>
+                        <td><input type="checkbox"></td>
+        
+                       <td> Data Structure &amp; Algorithm</td>
+                       <td>1151CS0241</td>
+                       <td> 3 </td>
+                       <td> Mon(01:45PM)-Thurs(11:45AM)-Fri(09:45AM) </td>
+                       
+                     </tr>
+                     <tr>
+                        <td><input type="checkbox"></td>
+        
+                        <td>Seminar II</td>
+                        <td>1151CS0251</td>
+                        <td> 1</td>
+                        <td style="transform: translateX(7vw);"> Tue(03:45PM) </td>
+                      </tr>
+                     <tr>
+                        <td><input type="checkbox"></td>
+        
+                        <td>Operating System</td>
+                        <td>1151CS0222</td>
+                        <td> 3 </td>
+                        <td> Mon(02:45PM)-Wed(10:45AM)-Sat(02:45PM) </td>
+                      </tr>
+                     <tr>
+                        <td><input type="checkbox"></td>
+        
+                        <td> Operating System Laboratory</td>
+                        <td>1151CS0212</td>
+                        <td> 1 </td>
+                        <td style="transform: translateX(7vw);"> Fri(10:45AM) </td>
+                      </tr>
+                     <tr>
+                        <td><input type="checkbox"></td>
+        
+                        <td>Data Structure Laboratory</td>
+                        <td>1151CS0262</td>
+                        <td> 1 </td>
+                        <td style="transform: translateX(7vw);">Thurs(01:45AM) </td>
+                      </tr>
+                     
+              </table>
+               
+              <br><br><br><br><br>
+              <button class="button button5"> REGISTER </button>
+                </div>
+        <div id="Fast" class="tabcontent">
         <table  border="0" style="font-size:13px; width:100%; padding:2.5%;">
            <tr>
             <td>
@@ -260,6 +446,7 @@
        
       <br><br><br><br><br>
       <button class="button button5"> REGISTER </button>
+        </div>
         </form>
 
       
@@ -286,7 +473,7 @@
             <li>
                 <a href="courseplanner" class="active">
                     <span class="icon"><i class="fas fa-user-friends"></i></span>
-                    <span class="item"> My Planner</span>
+                    <span class="item"> Course Planner</span>
                 </a>
             </li>
             <li>
@@ -325,6 +512,28 @@ hamburger.addEventListener("click", function(){
 document.querySelector("body").classList.toggle("active");
 })
 </script>
+<script>
+    function openCity(evt, cityName) {
+
+  var i, tabcontent, tablinks;
+
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+<script>
+    document.getElementById("defaultOpen").click();
+    </script>
 
 </body>
 </html>
