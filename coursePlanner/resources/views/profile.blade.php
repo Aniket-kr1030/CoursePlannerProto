@@ -5,7 +5,6 @@
     <link rel="stylesheet" href="offcanvas.css">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/offcanvas.css">
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link
       rel="stylesheet"
@@ -16,55 +15,136 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+    
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Course Planner </title>
+    <title> User Profile </title>
     <style>
-        .cont_11{
-    transform: translateX(10px);
-   padding-top: 10px;
-   justify-content: center;
-   width: max-content;
-    font-weight: 500;
-    font-size: large;
-   
- }
- 
- .three{
-    
-    float: left;
-    margin: 1% 2.5%;
-    text-align: justify;
-   width: 100%;
-   transform: translateY(-140px);
+      @import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
 
- }
-
- .c2{
-    transform: translateY(10vw);
-
-
-
- }
-
- .button5 {background-color: #555555;} /* Black */
- .button {
-  background-color: #4CAF50; /* Green */
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  transform: translateX(35vw);
+*{
+  margin: 0;
+  padding: 0;
+  
+  list-style: none;
+  font-family: 'Josefin Sans', sans-serif;
 }
 
+body{
+   background-color: #f3f3f3;
+}
 
+.user-wrapper{
+  
+  top: 50%;
+  left: 50%;
+ 
+  width: 100%;
+  height: 100%;
+  display: flex;
+  box-shadow: 0 1px 20px 0 rgba(69,90,100,.08);
+}
+
+.user-wrapper .left{
+  width: 50%;
+  background: linear-gradient(to right,#808080,#808080);
+  padding: 30px 25px;
+
+  text-align: center;
+  color: #fff;
+  font-size: 30px;
+}
+
+.user-wrapper .left img{
+  border-radius: 5px;
+  margin-bottom: 10px;
+  height: 300px;
+  width: 300px;
+}
+
+.user-wrapper .left h4{
+  margin-bottom: 20px;
+}
+
+.user-wrapper .left p{
+  font-size: 40px;
+}
+
+.user-wrapper .right{
+  width: 65%;
+  background: #fff;
+  padding: 30px 25px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  font-size: 25px;
+}
+
+.user-wrapper .right .info,
+.user-wrapper .right .projects{
+  margin-bottom: 25px;
+}
+
+.user-wrapper .right .info h3,
+.user-wrapper .right .projects h3{
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #e0e0e0;
+    color: #353c4e;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+.user-wrapper .right .info_data,
+.user-wrapper .right .projects_data{
+  display: flex;
+  justify-content: space-between;
+}
+
+.user-wrapper .right .info_data .data,
+.user-wrapper .right .projects_data .data{
+  width: 45%;
+}
+
+.user-wrapper .right .info_data .data h4,
+.user-wrapper .right .projects_data .data h4{
+    color: #353c4e;
+    margin-bottom: 5px;
+}
+
+.user-wrapper .right .info_data .data p,
+.user-wrapper .right .projects_data .data p{
+  font-size: 13px;
+  margin-bottom: 10px;
+  color: #919aa3;
+}
+
+.user-wrapper .social_media ul{
+  display: flex;
+}
+
+.user-wrapper .wrapper{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.user-wrapper .social_media ul li{
+  width: 45px;
+  height: 45px;
+  background: linear-gradient(to right,#01a9ac,#01dbdf);
+  margin-right: 10px;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 45px;
+}
+
+.user-wrapper .social_media ul li a{
+  color :#fff;
+  display: block;
+  font-size: 18px;
+}
     </style>
+    
 </head>
 <body>
     
@@ -107,7 +187,7 @@
                       <li><a class="dropdown-item" href="#">Action</a></li>
                       <li><a class="dropdown-item" href="#">Another action</a></li>
                       <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                      <li><a class="dropdown-item" href="contact">Contact Us</a></li>
                     </ul>
                   </li>
                   
@@ -124,7 +204,7 @@
                 </a>
                     
                     <ul class="dropdown-menu ">
-                        <li><a class="dropdown-item" href="profile"> {{$data->name}} <br> VTU{{$data->vtu}}</a></li>
+                        <li><a class="dropdown-item" href="#"> {{$data->name}} <br> VTU{{$data->vtu}}</a></li>
                         <li><hr class="dropdown-divider"></li>
                         <li><a class="dropdown-item" href="#"> Log Out </a></li>
                       </ul>
@@ -144,130 +224,53 @@
         </a>
       </div>
     </div>
-    <div class="headcourseplan" style="padding: 10px;">
 
-    <h1> What's your Pace ? </h1>
-    </div>
-
-    <div class="cont_11">
-        <div class="checkbox">
-        <div class="btn-group">
-            <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked />
-            <label class="btn btn-secondary" for="option1">Slow</label>
-          
-            <input type="radio" class="btn-check " name="options" id="option2" autocomplete="off" />
-            <label class="btn btn-secondary" for="option2">Medium</label>
-          
-            <input type="radio" class="btn-check " name="options" id="option3" autocomplete="off" />
-            <label class="btn btn-secondary" for="option3">Fast</label>
-            
+    <div class="user-wrapper">
+      <div class="left">
+          <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg" 
+          alt="user" width="100">
+          <h4>{{$data->name}}</h4>
+           <p>Student</p>
+      </div>
+      <div class="right">
+          <div class="info">
+              <h3>Information</h3>
+              <div class="info_data">
+                   <div class="data">
+                      <h4>Email</h4>
+                      <p>{{$data->email}}</p>
+                   </div>
+                   <div class="data">
+                     <h4>Phone</h4>
+                      <p>9000000000</p>
+                </div>
+              </div>
           </div>
-    </div>
-    </div>
-    <div class="c2">
-    <div class="three">
         
-        <h2>Courses for You <a href="#"></a></h2>
-        <form>
-        <table  border="0" style="font-size:13px; width:100%; padding:2.5%;">
-           <tr>
-            <td>
-
-            </td>
-           </tr>
-           <br>
-            <tr>
-               <td><strong> Select </strong></td> 
-               <td><strong> Course Name </strong></td>
-               <td><strong> Course ID </strong></td>
-               <td><strong> Credit </strong></td>
-               <td style="transform: translateX(7vw);"><strong> Schedule </strong></td>
-               
-               
-             </tr>
-
-             <tr>
-                <td><strong> ------</strong></td> 
-                <td><strong> --------------------</strong></td>
-                <td><strong> -----------</strong></td>
-                <td><strong> ----------- </strong></td>
-                <td><strong> -------------------------------------------------- </strong></td>
-                
-                
-              </tr>
-              <tr>
-                <td><strong> &nbsp;</strong></td> 
-                <td><strong> &nbsp;</strong></td> 
-                <td><strong> &nbsp;</strong></td> 
-                <td><strong> &nbsp;</strong></td> 
-                <td><strong> &nbsp;</strong></td> 
-                
-                
-                
-              </tr>
-             
-            <tr>
-                <td><input type="checkbox"></td>
-
-               <td> Data Structure &amp; Algorithm</td>
-               <td>1151CS0241</td>
-               <td> 3 </td>
-               <td> Mon(01:45PM)-Thurs(11:45AM)-Fri(09:45AM) </td>
-               
-             </tr>
-             <tr>
-                <td><input type="checkbox"></td>
-
-                <td>Programming in Python</td>
-                <td>1151CS0242</td>
-                <td> 2 </td>
-                <td> Tue(01:45PM)-Wed(08:45AM)-Sat(02:45PM) </td>
-              </tr>
-             <tr>
-                <td><input type="checkbox"></td>
-
-                <td>Seminar II</td>
-                <td>1151CS0251</td>
-                <td> 1</td>
-                <td style="transform: translateX(7vw);"> Tue(03:45PM) </td>
-              </tr>
-             <tr>
-                <td><input type="checkbox"></td>
-
-                <td>Operating System</td>
-                <td>1151CS0222</td>
-                <td> 3 </td>
-                <td> Mon(02:45PM)-Wed(10:45AM)-Sat(02:45PM) </td>
-              </tr>
-             <tr>
-                <td><input type="checkbox"></td>
-
-                <td> Operating System Laboratory</td>
-                <td>1151CS0212</td>
-                <td> 1 </td>
-                <td style="transform: translateX(7vw);"> Fri(10:45AM) </td>
-              </tr>
-             <tr>
-                <td><input type="checkbox"></td>
-
-                <td>Data Structure Laboratory</td>
-                <td>1151CS0262</td>
-                <td> 1 </td>
-                <td style="transform: translateX(7vw);">Thurs(01:45AM) </td>
-              </tr>
-             
-      </table>
-       
-      <br><br><br><br><br>
-      <button class="button button5"> REGISTER </button>
-        </form>
-
-      
-      <br>
-     </div>
-
-
-    </div>
+        <div class="projects">
+              <h3>Address</h3>
+              <div class="projects_data">
+                   <div class="data">
+                      <h4>Permanent</h4>
+                      <p> Prince Hostel, Avadi</p>
+                   </div>
+                   <div class="data">
+                     <h4>Current Address</h4>
+                      <p>VelTech University</p>
+                </div>
+              </div>
+          </div>
+        
+          <div class="social_media">
+              <ul>
+                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+        </div>
+      </div>
+  </div>
+    
        </div>
 
 
@@ -283,6 +286,7 @@
                     <span class="item">Home</span>
                 </a>
             </li>
+            
             <li>
                 <a href="courseplanner" class="active">
                     <span class="icon"><i class="fas fa-user-friends"></i></span>

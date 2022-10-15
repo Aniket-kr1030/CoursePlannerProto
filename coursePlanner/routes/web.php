@@ -27,11 +27,12 @@ Route::post('/uploadPdf',
 Route::get('/downloadPdf',
 [uploadCourse::class, 'download']
 );
-Route::get('/',[Auth::class,'login'])->middleware('isLoggedIn');
+Route::get('/',[Auth::class,'login'])->middleware('alreadyLoggedIn');
 Route::get('/login',[Auth::class,'login'])->middleware('alreadyLoggedIn');
-Route::get('/welcome',[Auth::class,'welcome'])->middleware('alreadyLoggedIn');
+Route::get('/welcome',[Auth::class,'welcome'])->middleware('isLoggedIn');
 Route::get('/courseplanner',[Auth::class,'courseplanner'])->middleware('isLoggedIn');
 Route::get('/gpacalculator',[Auth::class,'gpacalculator'])->middleware('isLoggedIn');
+Route::get('/profile',[Auth::class,'profile'])->middleware('isLoggedIn');
 Route::get('/registration',[Auth::class,'registration'])->middleware('alreadyLoggedIn');
 Route::post('/registered-user',[Auth::class,'registerUser'])->name
 ('registered-user');

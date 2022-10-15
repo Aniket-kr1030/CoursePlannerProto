@@ -199,7 +199,7 @@ input[type=reset]:hover {
                       <li><a class="dropdown-item" href="#">Action</a></li>
                       <li><a class="dropdown-item" href="#">Another action</a></li>
                       <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                      <li><a class="dropdown-item" href="contact">Contact Us</a></li>
                     </ul>
                   </li>
                   
@@ -216,9 +216,9 @@ input[type=reset]:hover {
                 </a>
                     
                     <ul class="dropdown-menu ">
-                        <li><a class="dropdown-item" href="#"> {{$data->name}} <br> VTU{{$data->vtu}}</a></li>
+                        <li><a class="dropdown-item" href="profile"> {{$data->name}} <br> VTU{{$data->vtu}}</a></li>
                         <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#"> Log Out </a></li>
+                        <li><a class="dropdown-item" href="logout"> Log Out </a></li>
                       </ul>
                 </div>
                         
@@ -263,12 +263,12 @@ input[type=reset]:hover {
             </li>
             <li>
                 <a href="#">
-                    <span class="icon"><i class="fas fa-database"></i></span>
+                    <span class="icon"><i class="fas fa-cog"></i></span>
                     <span class="item"> Settings </span>
                 </a>
             <li>
                 <a href="#">
-                    <span class="icon"><i class="fas fa-cog"></i></span>
+                    <span class="icon"><i class="fas fa-database"></i></span>
                     <span class="item"> Others </span>
                 </a>
             </li>
@@ -294,7 +294,7 @@ input[type=reset]:hover {
 		<td>VTU Number <td><input type="text" name="id" maxlength="10" value="{{$data->vtu}}" onkeyup="onlyNum()"> 
 		</tr>
 		<tr>
-		<td>Name <td><input type="text" name="name" onkeyup="onlyNum()">
+		<td>Name <td><input type="text" name="name" value="{{$data->name}}"onkeyup="onlyNum()">
 		</tr>
 		<tr>
 		<td>Program <td>Diploma &nbsp;<input type="radio" name="prog" value="Diploma">
