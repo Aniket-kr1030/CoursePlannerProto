@@ -146,7 +146,7 @@
     </div>
     <div class="headcourseplan" style="padding: 10px;">
 
-    <h1> What's your Pace ? </h1>
+    <h1> What pace do you want to choose for yourself this semester ? </h1>
     </div>
 
     <div class="cont_11">
@@ -278,7 +278,7 @@
         </div>
         <ul>
             <li>
-                <a href="welcome" >
+                <a href="dashboard" >
                     <span class="icon"><i class="fas fa-home"></i></span>
                     <span class="item">Home</span>
                 </a>

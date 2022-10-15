@@ -96,8 +96,7 @@
                  
                      <div class="nav-item dropdown">
                      <a class="nav-link dropdown-toggle" id="username" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                         <img src="/images/icons8-collaborator-male-30.png" alt="Logo" padding-left="5px" padding-right="30px" width="30" height="24" >
-                         {{$data->name}}
+                         <img src="/images/icons8-collaborator-male-30.png" alt="Logo" padding-left="5px" padding-right="30px" width="30" height="24">{{$data->name}}
                      </a>
                          
                          <ul class="dropdown-menu ">
@@ -195,8 +194,11 @@
      
          </div>
          
+         @if($count == 0):
+
          <div class = "headcourse">
-             <h2> COURSE ENROLLED </h2><br>
+             <h2> COURSES ENROLLED </h2><br>
+             
              <div id="ifnot">
              <div class="card text-center">
                  <div class="card-header">
@@ -206,21 +208,24 @@
                  
                    <a href="courseplanner" class="btn btn-primary"> Plan Your Course</a>
                  </div>
-                 <div class="card-footer text-muted">
-                   2 days ago
-                 </div>
+                 
                </div>
              </div>
+            
+             
          </div>
          
-     
-     
+        
+        @else:
+        <div class = "headcourse">
+            <h2> COURSES ENROLLED</h2><br>
+        </div>
          
          <div class="two">
      
              
          
-     
+        @foreach($courses as $course)
          <div class="card" style="width: 30rem;">
              
              <img class="card-img-top" src="https://source.unsplash.com/random/200x70?sig=1" alt="Card image cap">
@@ -230,56 +235,13 @@
                <a href="#" class="btn btn-primary">Go somewhere</a>
              </div>
            </div>
-     
-           <div class="card" style="width: 30rem;">
-             <img class="card-img-top" src="https://source.unsplash.com/random/200x70?sig=1" alt="Card image cap">
-             <div class="card-body">
-               <h5 class="card-title">Data Structure </h5>
-               <p class="card-text"> Program Core </p>
-               <a href="#" class="btn btn-primary">Go somewhere</a>
-             </div>
-           </div>
-     
-           <div class="card" style="width: 30rem;">
-             <img class="card-img-top" src="https://source.unsplash.com/random/200x70?sig=1" alt="Card image cap">
-             <div class="card-body">
-               <h5 class="card-title">Card title</h5>
-               <p class="card-text">Program Core</p>
-               <a href="#" class="btn btn-primary">Go somewhere</a>
-             </div>
-           </div>
-           <div class="card" style="width: 30rem;">
-             <img class="card-img-top" src="https://source.unsplash.com/random/200x70?sig=1"alt="Card image cap">
-             <div class="card-body">
-               <h5 class="card-title">Card title</h5>
-               <p class="card-text">Program Core</p>
-               <a href="#" class="btn btn-primary">Go somewhere</a>
-             </div>
-           </div>
-           <div class="card" style="width: 30rem;">
-             <img class="card-img-top" src="https://source.unsplash.com/random/200x70?sig=1" alt="Card image cap">
-             <div class="card-body">
-               <h5 class="card-title">Card title</h5>
-               <p class="card-text">Program Core</p>
-               <a href="#" class="btn btn-primary">Go somewhere</a>
-             </div>
-           </div>
-           <div class="card" style="width: 30rem;">
-             <img class="card-img-top" src="https://source.unsplash.com/random/200x70?sig=1" alt="Card image cap">
-             <div class="card-body">
-               <h5 class="card-title">Card title</h5>
-               <p class="card-text">Program Core</p>
-               <a href="#" class="btn btn-primary">Go somewhere</a>
-             </div>
-           </div>
-         </div>
-     
-         
+        @endforeach
+         @endif
      
        </div>
              <div class="sidebar">
                  <div class="profile">
-                     <h3> {{$data->name}} </h3>
+                     <h3>{{$data->name}}</h3>
                      <p>VTU{{$data->vtu}}</p>
                  </div>
                  <ul>
