@@ -392,18 +392,55 @@
                 
               </tr>
              
-            @foreach($slowcourse as $slowc):
             <tr>
                 <td><input type="checkbox"></td>
 
-               <td>{{$slowc->name}}</td>
-               <td>{{$slowc->id}}</td>
-               <td>{{$slowc->credit}} </td>
+               <td> Data Structure &amp; Algorithm</td>
+               <td>1151CS0241</td>
+               <td> 3 </td>
                <td> Mon(01:45PM)-Thurs(11:45AM)-Fri(09:45AM) </td>
                
              </tr>
-             @endforeach
-             
+             <tr>
+                <td><input type="checkbox"></td>
+
+                <td>Programming in Python</td>
+                <td>1151CS0242</td>
+                <td> 2 </td>
+                <td> Tue(01:45PM)-Wed(08:45AM)-Sat(02:45PM) </td>
+              </tr>
+             <tr>
+                <td><input type="checkbox"></td>
+
+                <td>Seminar II</td>
+                <td>1151CS0251</td>
+                <td> 1</td>
+                <td style="transform: translateX(7vw);"> Tue(03:45PM) </td>
+              </tr>
+             <tr>
+                <td><input type="checkbox"></td>
+
+                <td>Operating System</td>
+                <td>1151CS0222</td>
+                <td> 3 </td>
+                <td> Mon(02:45PM)-Wed(10:45AM)-Sat(02:45PM) </td>
+              </tr>
+             <tr>
+                <td><input type="checkbox"></td>
+
+                <td> Operating System Laboratory</td>
+                <td>1151CS0212</td>
+                <td> 1 </td>
+                <td style="transform: translateX(7vw);"> Fri(10:45AM) </td>
+              </tr>
+             <tr>
+                <td><input type="checkbox"></td>
+
+                <td>Data Structure Laboratory</td>
+                <td>1151CS0262</td>
+                <td> 1 </td>
+                <td style="transform: translateX(7vw);">Thurs(01:45AM) </td>
+              </tr>
              
       </table>
        

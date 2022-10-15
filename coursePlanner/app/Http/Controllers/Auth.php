@@ -9,7 +9,6 @@ use App\Models\user;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
 use App\Models\takes;
-use App\Models\course;
 class Auth extends Controller
 {
     public function login(){
@@ -29,15 +28,7 @@ class Auth extends Controller
         if(Session::has('loginId')){
             $data=User::where('id','=',Session::get('loginId'))->first();
         }
-        $slowcourse = course::all()->where('pace_id', '=', 'slow');
-        $medcourse = course::all()->where('pace_id', '=', 'medium');
-        $fastcourse = course::all()->where('pace_id', '=', 'fast');
-        return view('courseplanner',[
-            'data' => $data,
-            'slowcourse' => $slowcourse,
-            'medcourse' => $medcourse,
-            'fastcourse' => $fastcourse
-        ]);
+        return view('courseplanner',compact('data'));
 
     }
     public function gpacalculator(){

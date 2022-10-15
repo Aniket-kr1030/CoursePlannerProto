@@ -243,7 +243,7 @@ input[type=reset]:hover {
         </div>
         <ul>
             <li>
-                <a href="welcome">
+                <a href="dashboard">
                     <span class="icon"><i class="fas fa-home"></i></span>
                     <span class="item">Home</span>
                 </a>
