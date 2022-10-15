@@ -172,11 +172,11 @@
                 <div class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" id="username" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     <img src="/images/icons8-collaborator-male-30.png" alt="Logo" padding-left="5px" padding-right="30px" width="30" height="24" >
-                    Username
+                    {{$data->name}}
                 </a>
                     
                     <ul class="dropdown-menu ">
-                        <li><a class="dropdown-item" href="#"> Username <br> VTU xxxxx</a></li>
+                        <li><a class="dropdown-item" href="#"> {{$data->name}} <br> VTU {{$data->vtu}}</a></li>
                         <li><hr class="dropdown-divider"></li>
                         <li><a class="dropdown-item" href="#"> Log Out </a></li>
                       </ul>
@@ -310,8 +310,8 @@
 </div>
 <div class="sidebar">
     <div class="profile">
-        <h3> Username </h3>
-        <p>VTU 17060</p>
+        <h3> {{$data->name}} </h3>
+        <p>VTU {{$data->vtu}}</p>
     </div>
     <ul>
         <li>
