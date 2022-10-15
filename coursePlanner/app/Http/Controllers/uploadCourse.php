@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\pdfCourse;
 use Illuminate\Http\Request;
+use IIluminate\Support\Facades\Stroage;
+
 
 class uploadCourse extends Controller
 {
@@ -19,8 +21,11 @@ class uploadCourse extends Controller
         return redirect()->back();
     }
 
-    public function download(){
+    public function show(){
         $data= pdfCourse::all();
         return view('showpdf', compact('data'));
+    }
+    public function downcse( $file){
+        return response()->download(public_path('assets/coursePdfs'.$file));
     }
 }

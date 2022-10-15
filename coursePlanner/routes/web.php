@@ -23,8 +23,16 @@ Route::post('/uploadPdf',
 [uploadCourse::class, 'store']
 );
 
-Route::get('/downloadPdf',
-[uploadCourse::class, 'download']
+Route::get('/up',[
+    view('upload_course')
+]
+);
+Route::get('/up', function () {
+    return view('upload_course');
+});
+
+Route::get('/showPdf',
+[uploadCourse::class, 'show']
 );
 Route::get('/',[Auth::class,'login'])->middleware('alreadyLoggedIn');
 Route::get('/login',[Auth::class,'login'])->middleware('alreadyLoggedIn');

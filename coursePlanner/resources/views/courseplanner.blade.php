@@ -367,8 +367,8 @@
              
       </table>
        
-      <br><br>
-      <button class="button button4"> REGISTER </button>
+      <br><br><br><br>
+      <button class="button button4" style="transform:"> REGISTER </button>
         </div>
         </form>
 
@@ -418,7 +418,7 @@
             </li>
         </ul>
     </div>
-    </div>
+  </div>
     
     
 
