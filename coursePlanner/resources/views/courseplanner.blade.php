@@ -128,11 +128,11 @@
                           Syllabus
                         </a>
                         <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="#">Computer Science</a></li>
+                          <li><a class="dropdown-item" href="/pdf/B.Tech-CSE-R-15_Master_Copy_Updated_As%20on%2021.11.2020-website.pdf" download>Computer Science</a></li>
                           <li><a class="dropdown-item" href="#">Electronic & communication</a></li>
                           <li><a class="dropdown-item" href="#">Information Technology</a></li>
-                          <li><a class="dropdown-item" href="#">Electrical </a></li>
-                          <li><a class="dropdown-item" href="#">Mechanical</a></li>
+                          <li><a class="dropdown-item" href="/pdf/VTUR15-REGULATION.p" download>Electrical </a></li>
+                          <li><a class="dropdown-item" href="/pdf/B.Tech%20(%20Mechanical)-%20Curriculum%20&%20Syllabus.pdf" download>Mechanical</a></li>
                           <li><a class="dropdown-item" href="#">BioMedical</a></li>
                           
                         </ul>
@@ -143,13 +143,18 @@
                     </a>
                     <ul class="dropdown-menu">
                       <li><a class="dropdown-item" href="#">Action</a></li>
-                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><a class="dropdown-item" href="admin">Admin Only</a></li>
                       <li><hr class="dropdown-divider"></li>
                       <li><a class="dropdown-item" href="#">Something else here</a></li>
                     </ul>
                   </li>
+
+                  
+                  
                   
                 </ul>
+                <div class="nav-item d-flex">
+                </div>
                 <form class="d-flex" role="search">
                   <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                   <button class="btn btn-outline-success" type="submit">Search</button>
@@ -352,13 +357,13 @@
                 
               </tr>
              
-            @foreach($slowcourse as $slowc):
+            @foreach($fastcourse as $fastc):
             <tr>
                 <td><input type="checkbox"></td>
 
-               <td>{{$slowc->name}}</td>
-               <td>{{$slowc->id}}</td>
-               <td>{{$slowc->credit}} </td>
+               <td>{{$fastc->name}}</td>
+               <td>{{$fastc->id}}</td>
+               <td>{{$fastc->credit}} </td>
                <td> Mon(01:45PM)-Thurs(11:45AM)-Fri(09:45AM) </td>
                
              </tr>

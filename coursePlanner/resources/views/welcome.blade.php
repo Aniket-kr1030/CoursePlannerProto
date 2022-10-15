@@ -68,12 +68,12 @@
                                Syllabus
                              </a>
                              <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Computer Science</a></li>
-                                <li><a class="dropdown-item" href="#">Electronic & communication</a></li>
-                                <li><a class="dropdown-item" href="#">Information Technology</a></li>
-                                <li><a class="dropdown-item" href="#">Electrical </a></li>
-                                <li><a class="dropdown-item" href="#">Mechanical</a></li>
-                                <li><a class="dropdown-item" href="#">BioMedical</a></li>
+                              <li><a class="dropdown-item" href="/pdf/B.Tech-CSE-R-15_Master_Copy_Updated_As%20on%2021.11.2020-website.pdf" download>Computer Science</a></li>
+                          <li><a class="dropdown-item" href="#">Electronic & communication</a></li>
+                          <li><a class="dropdown-item" href="#">Information Technology</a></li>
+                          <li><a class="dropdown-item" href="/pdf/VTUR15-REGULATION.p" download>Electrical </a></li>
+                          <li><a class="dropdown-item" href="/pdf/B.Tech%20(%20Mechanical)-%20Curriculum%20&%20Syllabus.pdf" download>Mechanical</a></li>
+                          <li><a class="dropdown-item" href="#">BioMedical</a></li>
                              </ul>
                            </li>
                        <li class="nav-item dropdown">
@@ -81,9 +81,9 @@
                            Others
                          </a>
                          <ul class="dropdown-menu">
-                           <li><a class="dropdown-item" href="#">Action</a></li>
-                           <li><a class="dropdown-item" href="#">Another action</a></li>
-                           <li><hr class="dropdown-divider"></li>
+                            @if($data->role == 'admin'):
+                           <li><a class="dropdown-item" href="admin">Admin Only</a></li>
+                            @endif
                            <li><a class="dropdown-item" href="contact">Contact Us</a></li>
                          </ul>
                        </li>
