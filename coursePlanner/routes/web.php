@@ -29,7 +29,7 @@ Route::get('/downloadPdf',
 );
 Route::get('/',[Auth::class,'login'])->middleware('isLoggedIn');
 Route::get('/login',[Auth::class,'login'])->middleware('alreadyLoggedIn');
-Route::get('/welcome',[Auth::class,'welcome'])->middleware('alreadyLoggedIn');
+Route::get('/welcome',[Auth::class,'welcome'])->middleware('isLoggedIn');
 Route::get('/courseplanner',[Auth::class,'courseplanner'])->middleware('isLoggedIn');
 Route::get('/gpacalculator',[Auth::class,'gpacalculator'])->middleware('isLoggedIn');
 Route::get('/registration',[Auth::class,'registration'])->middleware('alreadyLoggedIn');

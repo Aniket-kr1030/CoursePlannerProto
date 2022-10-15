@@ -109,7 +109,7 @@
                     <ul class="dropdown-menu ">
                         <li><a class="dropdown-item" href="#"> {{$data->name}} <br> VTU{{$data->vtu}}</a></li>
                         <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#"> Log Out </a></li>
+                        <li><a class="dropdown-item" href="logout"> Log Out </a></li>
                       </ul>
                 </div>
                         
@@ -243,7 +243,7 @@
                 </a>
             </li>
             <li>
-                <a href="cousreplanner" class="active">
+                <a href="courseplanner" class="active"]>
                     <span class="icon"><i class="fas fa-user-friends"></i></span>
                     <span class="item"> Course Planner</span>
                 </a>
