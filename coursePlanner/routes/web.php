@@ -21,7 +21,6 @@ use GuzzleHttp\Middleware;
 
 Route::post('/uploadPdf',
 [uploadCourse::class, 'store']
-
 );
 
 Route::get('/downloadPdf',
