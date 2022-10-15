@@ -179,7 +179,7 @@ input[type=reset]:hover {
                 <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                          Syllabus
+                          Courses
                         </a>
                         <ul class="dropdown-menu">
                           <li><a class="dropdown-item" href="#">Computer Science</a></li>
@@ -252,7 +252,7 @@ input[type=reset]:hover {
             <li>
                 <a href="courseplanner">
                     <span class="icon"><i class="fas fa-user-friends"></i></span>
-                    <span class="item"> My Planner</span>
+                    <span class="item"> Course Planner</span>
                 </a>
             </li>
             <li>
@@ -294,11 +294,7 @@ input[type=reset]:hover {
 		<td>VTU Number <td><input type="text" name="id" maxlength="10" value="{{$data->vtu}}" onkeyup="onlyNum()"> 
 		</tr>
 		<tr>
-<<<<<<< Updated upstream
 		<td>Name <td><input type="text" name="name" value="{{$data->name}}"onkeyup="onlyNum()">
-=======
-		<td>Name <td><input type="text" name="name" value="{{$data->name}}" onkeyup="onlyNum()">
->>>>>>> Stashed changes
 		</tr>
 		<tr>
 		<td>Program <td>Diploma &nbsp;<input type="radio" name="prog" value="Diploma">
