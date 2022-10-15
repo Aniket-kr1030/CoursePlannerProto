@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="offcanvas.css">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/offcanvas.css">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link
       rel="stylesheet"
@@ -44,7 +45,23 @@
     transform: translateY(10vw);
 
 
+
  }
+
+ .button5 {background-color: #555555;} /* Black */
+ .button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  transform: translateX(35vw);
+}
 
 
     </style>
@@ -90,7 +107,7 @@
                       <li><a class="dropdown-item" href="#">Action</a></li>
                       <li><a class="dropdown-item" href="#">Another action</a></li>
                       <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="contact">Contact Us</a></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
                     </ul>
                   </li>
                   
@@ -109,7 +126,7 @@
                     <ul class="dropdown-menu ">
                         <li><a class="dropdown-item" href="profile"> {{$data->name}} <br> VTU{{$data->vtu}}</a></li>
                         <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="logout"> Log Out </a></li>
+                        <li><a class="dropdown-item" href="#"> Log Out </a></li>
                       </ul>
                 </div>
                         
@@ -143,6 +160,7 @@
           
             <input type="radio" class="btn-check " name="options" id="option3" autocomplete="off" />
             <label class="btn btn-secondary" for="option3">Fast</label>
+            
           </div>
     </div>
     </div>
@@ -150,6 +168,7 @@
     <div class="three">
         
         <h2>Courses for You <a href="#"></a></h2>
+        <form>
         <table  border="0" style="font-size:13px; width:100%; padding:2.5%;">
            <tr>
             <td>
@@ -162,6 +181,8 @@
                <td><strong> Course Name </strong></td>
                <td><strong> Course ID </strong></td>
                <td><strong> Credit </strong></td>
+               <td style="transform: translateX(7vw);"><strong> Schedule </strong></td>
+               
                
              </tr>
 
@@ -170,9 +191,20 @@
                 <td><strong> --------------------</strong></td>
                 <td><strong> -----------</strong></td>
                 <td><strong> ----------- </strong></td>
+                <td><strong> -------------------------------------------------- </strong></td>
+                
                 
               </tr>
-             
+              <tr>
+                <td><strong> &nbsp;</strong></td> 
+                <td><strong> &nbsp;</strong></td> 
+                <td><strong> &nbsp;</strong></td> 
+                <td><strong> &nbsp;</strong></td> 
+                <td><strong> &nbsp;</strong></td> 
+                
+                
+                
+              </tr>
              
             <tr>
                 <td><input type="checkbox"></td>
@@ -180,6 +212,8 @@
                <td> Data Structure &amp; Algorithm</td>
                <td>1151CS0241</td>
                <td> 3 </td>
+               <td> Mon(01:45PM)-Thurs(11:45AM)-Fri(09:45AM) </td>
+               
              </tr>
              <tr>
                 <td><input type="checkbox"></td>
@@ -187,6 +221,7 @@
                 <td>Programming in Python</td>
                 <td>1151CS0242</td>
                 <td> 2 </td>
+                <td> Tue(01:45PM)-Wed(08:45AM)-Sat(02:45PM) </td>
               </tr>
              <tr>
                 <td><input type="checkbox"></td>
@@ -194,6 +229,7 @@
                 <td>Seminar II</td>
                 <td>1151CS0251</td>
                 <td> 1</td>
+                <td style="transform: translateX(7vw);"> Tue(03:45PM) </td>
               </tr>
              <tr>
                 <td><input type="checkbox"></td>
@@ -201,6 +237,7 @@
                 <td>Operating System</td>
                 <td>1151CS0222</td>
                 <td> 3 </td>
+                <td> Mon(02:45PM)-Wed(10:45AM)-Sat(02:45PM) </td>
               </tr>
              <tr>
                 <td><input type="checkbox"></td>
@@ -208,6 +245,7 @@
                 <td> Operating System Laboratory</td>
                 <td>1151CS0212</td>
                 <td> 1 </td>
+                <td style="transform: translateX(7vw);"> Fri(10:45AM) </td>
               </tr>
              <tr>
                 <td><input type="checkbox"></td>
@@ -215,11 +253,14 @@
                 <td>Data Structure Laboratory</td>
                 <td>1151CS0262</td>
                 <td> 1 </td>
+                <td style="transform: translateX(7vw);">Thurs(01:45AM) </td>
               </tr>
              
       </table>
        
-      <br><br><br>
+      <br><br><br><br><br>
+      <button class="button button5"> REGISTER </button>
+        </form>
 
       
       <br>
@@ -243,7 +284,7 @@
                 </a>
             </li>
             <li>
-                <a href="courseplanner" class="active"]>
+                <a href="courseplanner" class="active">
                     <span class="icon"><i class="fas fa-user-friends"></i></span>
                     <span class="item"> Course Planner</span>
                 </a>
@@ -267,10 +308,9 @@
             </li>
         </ul>
     </div>
+    </div>
     
     
-</div>
-
 
 
 

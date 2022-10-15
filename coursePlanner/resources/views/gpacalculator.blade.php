@@ -294,7 +294,7 @@ input[type=reset]:hover {
 		<td>VTU Number <td><input type="text" name="id" maxlength="10" value="{{$data->vtu}}" onkeyup="onlyNum()"> 
 		</tr>
 		<tr>
-		<td>Name <td><input type="text" name="name" onkeyup="onlyNum()">
+		<td>Name <td><input type="text" name="name" value="{{$data->name}}"onkeyup="onlyNum()">
 		</tr>
 		<tr>
 		<td>Program <td>Diploma &nbsp;<input type="radio" name="prog" value="Diploma">
